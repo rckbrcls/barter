@@ -1,19 +1,59 @@
-# barter
+# Barter
 
-## Overview
+> **Status:** Experimental
+> This project was built as a concept and learning exercise. The implementation is still close to the Flutter starter app.
 
-This project is a gamified platform for bartering goods and services. Users can customize avatars, participate in secure trades, and earn rewards. The platform also includes community engagement features and a comprehensive reputation system to ensure trust and security in transactions.
+Flutter app concept for a gamified barter marketplace. The product idea combines goods and service exchange, avatars, reputation, rewards, and safer community trading.
 
-## Key Features
+## Summary
 
-- **Avatar Customization:** Create and personalize avatars with unlockable items as you progress on the platform.
-- **Gamified Trade System:** Engage in trades that reward you with points, bonuses, and achievements for specific activities.
-- **Reward System:** Earn badges, levels, and special achievements for reaching milestones and successful trades.
-- **Security and Fraud Prevention:** Multiple layers of security, including user verification, two-factor authentication (2FA), and a reputation system to minimize risks.
-- **Community Engagement:** Forums, chat rooms, and social media integration for user interaction and community building.
-- **Marketplace and Auction System:** List items for sale or participate in auctions, reaching a broader audience for your goods.
-- **Reputation Mechanism:** Rate other users after trades, contributing to a reputation score that influences future transactions.
+- [What it is](#what-it-is)
+- [Goals](#goals)
+- [Product concept](#product-concept)
+- [Project map](#project-map)
+- [Current state](#current-state)
+- [Working notes](#working-notes)
 
-## Contribution
+## What it is
 
-Contributions are welcome! Please check the contribution guide for details on how to participate in the development of this project.
+`barter` is a mobile app concept for people who want to trade goods or services without reducing every exchange to a cash sale. The intended product uses reputation, community features, and gamification to make barter safer and more engaging.
+
+## Goals
+
+- Explore a marketplace model centered on direct exchange.
+- Make trust visible through reputation, ratings, verification, and trade history.
+- Add progression through badges, levels, achievements, and avatar customization.
+- Provide a foundation that can grow into marketplace listings, auctions, chat, and community features.
+
+## Product concept
+
+- Customizable user avatars.
+- Gamified trade flow with points and rewards.
+- Marketplace and auction-style listing surfaces.
+- Reputation score based on completed trades and peer feedback.
+- Community tools such as forums or chat rooms.
+- Security concepts such as verification and fraud prevention.
+
+## Project map
+
+```text
+barter/
+├── lib/          # Flutter application entrypoint
+├── android/      # Android shell
+├── ios/          # iOS shell
+├── macos/        # macOS shell
+├── linux/        # Linux shell
+├── windows/      # Windows shell
+├── web/          # Web shell
+└── pubspec.yaml
+```
+
+## Current state
+
+The repository is still close to the default Flutter starter app. The README documents the product direction; the implementation has not caught up with the full marketplace concept yet.
+
+## Working notes
+
+- Treat `lib/main.dart` as starter code until the actual product shell replaces it.
+- Update `pubspec.yaml` metadata before publishing or presenting the app externally.
+- Keep marketplace, reputation, and reward behavior explicit in future domain models.
