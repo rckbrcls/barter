@@ -7,25 +7,24 @@ Flutter app concept for a gamified barter marketplace. The product idea combines
 
 ## Summary
 
-- [What it is](#what-it-is)
-- [Goals](#goals)
-- [Product concept](#product-concept)
-- [Project map](#project-map)
-- [Current state](#current-state)
-- [Working notes](#working-notes)
+- Experimental Flutter concept for a gamified barter marketplace.
+- Solves a product exploration around goods/services exchange, reputation, rewards, avatars, community trading, auctions, and safer direct barter.
+- Main stack: Flutter project shells for mobile, desktop, and web, with current implementation still close to starter code.
+- Current status: experimental concept and learning exercise, not a complete marketplace implementation.
+- Technical value: captures product direction and platform scaffolding before domain models are fully built.
 
-## What it is
+## Overview
 
 `barter` is a mobile app concept for people who want to trade goods or services without reducing every exchange to a cash sale. The intended product uses reputation, community features, and gamification to make barter safer and more engaging.
 
-## Goals
+## Motivation
 
 - Explore a marketplace model centered on direct exchange.
 - Make trust visible through reputation, ratings, verification, and trade history.
 - Add progression through badges, levels, achievements, and avatar customization.
 - Provide a foundation that can grow into marketplace listings, auctions, chat, and community features.
 
-## Product concept
+## Features
 
 - Customizable user avatars.
 - Gamified trade flow with points and rewards.
@@ -34,7 +33,7 @@ Flutter app concept for a gamified barter marketplace. The product idea combines
 - Community tools such as forums or chat rooms.
 - Security concepts such as verification and fraud prevention.
 
-## Project map
+## Project Structure
 
 ```text
 barter/
@@ -48,11 +47,11 @@ barter/
 └── pubspec.yaml
 ```
 
-## Current state
+## Current Status
 
 The repository is still close to the default Flutter starter app. The README documents the product direction; the implementation has not caught up with the full marketplace concept yet.
 
-## Working notes
+## Known Limitations
 
 - Treat `lib/main.dart` as starter code until the actual product shell replaces it.
 - Update `pubspec.yaml` metadata before publishing or presenting the app externally.
