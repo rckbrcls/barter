@@ -1,52 +1,54 @@
-# Contribution Guide
+# Contributing to Barter
 
-Thank you for considering contributing to this project! Your involvement helps make this project better for everyone. This guide outlines how you can get involved, whether you’re reporting a bug, proposing a new feature, or submitting a pull request.
+Barter is an early Flutter project. The current implementation is still close to the default Flutter counter app, while the product direction is documented in `REQUIREMENTS.md`.
 
-## How to Contribute
+Contributions should make the repository more accurate, testable, and aligned with the Barter product direction without claiming unfinished marketplace behavior as complete.
 
-### 1. Reporting Bugs
+## Development Setup
 
-If you find a bug, please create an issue in the repository with the following details:
+Install Flutter for the platform you want to target, then restore dependencies:
 
-- **Description:** A clear and concise description of what the bug is.
-- **Steps to Reproduce:** A list of steps to reproduce the bug.
-- **Expected Behavior:** What you expected to happen.
-- **Actual Behavior:** What actually happened.
-- **Screenshots:** If applicable, add screenshots to help explain your problem.
-- **Environment:** Specify the environment where the bug occurred (e.g., operating system, browser, etc.).
+```sh
+flutter pub get
+```
 
-### 2. Proposing New Features
+Run the app on a Flutter-supported device:
 
-If you have an idea for a new feature or an enhancement, please open an issue to discuss it with the maintainers. Include the following details:
+```sh
+flutter devices
+flutter run -d <device-id>
+```
 
-- **Feature Description:** A clear and concise description of the feature or enhancement.
-- **Use Case:** Explain the problem the feature would solve or the benefit it would provide.
-- **Proposed Solution:** Describe how you envision the feature working.
+Run checks before submitting changes:
 
-### 3. Submitting a Pull Request
+```sh
+flutter analyze
+flutter test
+```
 
-We welcome pull requests! If you’re ready to contribute, follow these steps:
+## Contribution Guidelines
 
-1. **Fork the Repository:** Create a fork of the repository to work on your changes.
-2. **Create a Branch:** Create a new branch in your fork for your changes (e.g., `feature/new-feature` or `bugfix/fix-issue`).
-3. **Make Your Changes:** Write clear, concise, and well-documented code. Ensure your code follows the project's coding standards.
-4. **Test Your Changes:** If applicable, add tests to cover your changes and ensure all existing tests pass.
-5. **Commit Your Changes:** Use clear and descriptive commit messages. Follow the conventional commits standard if used in the project.
-6. **Push Your Changes:** Push your branch to your fork on GitHub.
-7. **Open a Pull Request:** Submit a pull request to the main repository. Include a description of your changes and reference any related issues.
+- Keep app strings, code, comments, and documentation in English.
+- Keep product claims honest. If a feature is only planned in `REQUIREMENTS.md`, do not present it as implemented in `README.md`.
+- Update `test/widget_test.dart` when replacing the starter counter UI.
+- Keep Flutter-generated platform files unchanged unless the change is intentional and documented.
+- Replace starter metadata such as `A new Flutter project.`, `Flutter Demo`, and `com.example.barter` only when the corresponding app metadata work is in scope.
+- Add new documentation only when the codebase has enough real behavior to justify it.
+- Do not add secrets, credentials, API keys, signing files, or local machine paths to the repository.
 
-### 4. Code of Conduct
+## Pull Request Checklist
 
-Please adhere to our [Code of Conduct](#) while participating in this project. We expect all contributors to maintain a respectful and collaborative environment.
+Before opening a pull request, verify:
 
-### 5. Review Process
+- The change is based on current code, not only on the product concept.
+- `flutter analyze` passes.
+- `flutter test` passes.
+- Documentation was updated if user-visible behavior, project setup, or architecture changed.
+- New product behavior has tests or a clear note explaining why tests were not added.
+- No generated build output or local tool artifacts were committed.
 
-After you submit your pull request:
+## Project Workflow Notes
 
-- **Review:** A project maintainer will review your code, provide feedback, and request changes if necessary.
-- **Discussion:** Be prepared to discuss your pull request and make additional commits as requested by reviewers.
-- **Merge:** Once your pull request is approved, it will be merged into the main branch.
+No repository-specific branch naming rule, commit convention, release process, or CI workflow is defined in the current codebase.
 
-### 6. Getting Help
-
-If you need help with your contributions or have any questions, feel free to open an issue or contact the maintainers directly through the repository’s communication channels.
+TODO: not identified in the current codebase - contribution review owner and expected pull request review process.

@@ -1,562 +1,241 @@
----
-## Summary
-
-1. [**System Description**](#system-description)
-
-- [**Key System Features**](#a-key-system-features)
-- [**System Context**](#b-system-context)
-- [**Potential Stakeholders**](#c-potential-stakeholders)
-- [**Existing Similar Systems and Differentiation**](#d-existing-similar-systems-and-differentiation)
-
-2. [**System Requirements**](#system-requirements)
-
-- [**ISO/IEC 25010 Quality Attributes**](#a-isoiec-25010-quality-attributes)
-- [**Requirements Elicitation Techniques**](#b-requirements-elicitation-techniques)
-- [**Requirements Document**](#c-requirements-document)
-
-3. [**User Stories**](#user-stories)
-
-- [**Avatar Customization and Progression**](#1-avatar-customization-and-progression)
-- [**Gamified Trade System**](#2-gamified-trade-system)
-- [**Reward System and Achievements**](#3-reward-system-and-achievements)
-- [**Security and Fraud Prevention**](#4-security-and-fraud-prevention)
-- [**Community Engagement and Social Features**](#5-community-engagement-and-social-features)
-- [**Marketplace and Auction System**](#6-marketplace-and-auction-system)
-- [**User Reputation and Feedback Mechanism**](#7-user-reputation-and-feedback-mechanism)
-
-4. [**Actors and Use Cases**](#actors-and-use-cases)
-
-- [**Actors**](#a-actors)
-- [**Use Cases**](#b-use-cases)
-- [**Use Case Diagram Explanation**](#c-use-case-diagram-explanation)
-
-5. [**MVP (Minimum Viable Product)**](#mvp-minimum-viable-product)
-
-- [**MVP to be Built**](#a-mvp-to-be-built)
-- [**Features Available in the MVP**](#b-features-available-in-the-mvp)
-- [**Potential Customer Reach**](#c-potential-customer-reach)
-
-6. [**A/B Testing**](#ab-testing)
-- [**A/B Testing Application Scenario**](#a-ab-testing-application-scenario)
-- [**Versions A and B and A/B Test Execution**](#b-versions-a-and-b-and-ab-test-execution)
-- [**Metrics to be Used**](#c-metrics-to-be-used)
----
-
-# System Description
-
-## A) Key System Features
-
-1. **Avatar Customization and Progression**
-
-   - Users can create and customize avatars with various options for appearance, including clothing, accessories, and special effects. Avatars can be upgraded as users gain experience through successful trades and participation in community events.
-
-2. **Gamified Trade System**
-
-   - The core functionality revolves around a trading platform where users can barter goods and services. Trades are incentivized with points and rewards, and users can earn bonuses for frequent trading, completing trades in specific categories, or participating in special events.
-
-3. **Reward System and Achievements**
-
-   - In addition to points, users can earn badges, levels, and special achievements for hitting milestones, such as completing a certain number of trades, maintaining a high reputation, or trading in unique or rare items.
-
-4. **Security and Fraud Prevention**
-
-   - The system includes multiple layers of security, such as user verification, trade escrow, two-factor authentication (2FA), and a reputation system to minimize the risk of fraud. Dispute resolution mechanisms and community moderation are also integrated to ensure fair and safe trading.
-
-5. **Community Engagement and Social Features**
-
-   - The platform encourages community interaction through features like forums, chat rooms, and social media integration. Users can form trade groups, participate in community challenges, and engage in discussions to build a sense of belonging and collaboration.
-
-6. **Marketplace and Auction System**
-
-   - Besides direct trades, users can list items in a marketplace or participate in auctions. This adds a competitive element to trading and allows users to reach a wider audience for their goods and services.
-
-7. **User Reputation and Feedback Mechanism**
-
-   - A comprehensive reputation system is implemented where users can rate each other after trades. Feedback is recorded, contributing to a user's overall reputation score, which influences their trustworthiness in future trades.
-
-## B) System Context
-
-The application targets individuals and communities interested in bartering goods and services in an engaging, gamified environment. It blends traditional trade systems with modern gamification, social networking, and strong security features. The system is designed to foster a safe, vibrant, and dynamic trading community where users can enjoy trading as a fun and rewarding experience.
-
-## C) Potential Stakeholders
-
-1. **Individual Traders**
-
-   - Users who want to trade goods and services in a community-focused environment, enhanced by gamification and social interaction.
-
-2. **Gamers and Collectors**
-
-   - Users attracted to the gamified elements of avatar customization, achievements, and the collection of rare items and rewards.
-
-3. **Security-Conscious Users**
-
-   - Users who prioritize a secure trading environment with robust protections against fraud and scams.
-
-4. **Community Leaders and Moderators**
-
-   - Users who play an active role in managing and growing the community, ensuring fairness and safety within the platform.
-
-5. **Marketplace Enthusiasts**
-
-   - Users who enjoy buying, selling, and auctioning items in an online marketplace, with the added thrill of competition and gamified rewards.
-
-## D) Existing Similar Systems and Differentiation
-
-Existing platforms like eBay and Craigslist offer trade and auction capabilities, but they lack the community engagement, gamification, and strong security focus of this system. Other gamified trading platforms might exist, but the proposed system differentiates itself by integrating social features, a reputation system, and comprehensive security measures, creating a unique and engaging trading environment.
-
----
-
-# System Requirements
-
-## A) ISO/IEC 25010 Quality Attributes
-
-### 1. Performance Efficiency
-
-- **Measurement Metrics:**
-  - Response time during trade negotiations, avatar customization, and marketplace transactions.
-  - Resource usage during peak trading hours and community events.
-  - Speed and efficiency of the reward calculation and distribution system.
-
-### 2. Usability
-
-- **Measurement Metrics:**
-  - User satisfaction with the ease of use for trading, avatar customization, and reward redemption.
-  - Number of steps required to complete a trade or engage in community activities.
-  - Success rate of new users completing their first trade or customizing their avatar.
-
-### 3. Reliability
-
-- **Measurement Metrics:**
-  - System uptime during critical trading periods, especially during auctions and community events.
-  - Frequency of errors or crashes during trade processing and reward distribution.
-  - Success rate of trades completing without disputes or fraud incidents.
-
-### 4. Security
-
-- **Measurement Metrics:**
-  - Effectiveness of user verification and fraud prevention systems, including 2FA and trade escrow.
-  - Compliance with secure coding practices in the development of all features.
-  - Rate of successful fraud detection and prevention.
-
-### 5. Maintainability
-
-- **Measurement Metrics:**
-  - Time required to update the system, fix bugs, or add new features.
-  - Code coverage of automated tests, particularly for security-critical features.
-  - Frequency and success of software builds and releases.
-
-### 6. Compatibility
-
-- **Measurement Metrics:**
-  - Consistency of user experience across different devices and platforms (web, mobile, desktop).
-  - Integration with social media platforms and external marketplaces.
-  - Support for multiple languages and currencies.
-
-### 7. Accessibility
-
-- **Measurement Metrics:**
-  - Compliance with accessibility standards for users with disabilities.
-  - User feedback on the accessibility of trading, customization, and community features.
-  - Availability of alternative text for images, keyboard navigation, and screen reader support.
-
-## B) Requirements Elicitation Techniques
-
-### 1. User Interviews
-
-- **Justification:** Interviews with potential users will help identify their expectations for trade security, gamification, and social features.
-
-### 2. Prototype Testing
-
-- **Justification:** Testing early prototypes with users will provide insights into usability, security, and engagement with gamified elements.
-
-### 3. Competitive Analysis
-
-- **Justification:** Analyzing other trading platforms and gamified systems will help identify opportunities for differentiation and innovation.
-
-### 4. Focus Groups
-
-- **Justification:** Focus groups consisting of different user types (traders, gamers, security-conscious users) will provide detailed feedback on proposed features.
-
-### 5. Community Surveys
-
-- **Justification:** Surveys distributed to online communities and forums will gather a broad range of opinions on desired features, security concerns, and gamification elements.
-
-### 6. Beta Testing
-
-- **Justification:** A closed beta with selected users will allow for real-world testing of the system's performance, security, and user engagement before the full launch.
-
-## C) Requirements Document
-
-### 1. System Overview
-
-The system is a gamified trading platform where users can barter goods and services, customize avatars, and earn rewards. The platform includes a secure trading environment, social features, a marketplace, and a comprehensive reputation system. It is designed to be accessible, engaging, and safe for a diverse user base.
-
-### 2. System Functions
-
-- **Avatar Customization and Progression**
-- **Gamified Trade System**
-- **Reward System and Achievements**
-- **Security and Fraud Prevention**
-- **Community Engagement and Social Features**
-- **Marketplace and Auction System**
-- **User Reputation and Feedback Mechanism**
-
-### 3. Definitions/Acronyms/Abbreviations
-
-- **Escrow:** A service that holds items or money during a trade until all terms are met, ensuring secure transactions.
-- **Gamification:** The application of game-like elements (e.g., points, rewards) to non-game contexts to increase user engagement.
-- **2FA (Two-Factor Authentication):** A security process that requires two forms of identification before access is granted.
-
-### 4. User Characteristics
-
-- Users range from casual traders to hardcore gamers, all with an interest in secure, engaging online trading.
-- Users may have varying levels of technical proficiency, requiring the system to be intuitive and user-friendly.
-- Some users may have accessibility needs, necessitating compliance with accessibility standards.
-
-### 5. Constraints/Assumptions/Dependencies
-
-- The system assumes users have access to the internet and devices capable of running the application.
-- It depends on secure payment and escrow services for financial transactions.
-- The system must comply with data protection regulations, particularly when handling user information and transaction data.
-
-### 6. Functional Requirements
-
-- The system must provide a customizable avatar experience, with progression tied to user activity.
-- It must support secure, transparent trades with built-in fraud prevention measures.
-- Users should be able to earn and redeem points and rewards through various activities.
-- The system must enable community interaction, including forums, chat rooms, and social media integration.
-- It must include a marketplace and auction system for listing and purchasing items.
-- A reputation system should track and display user feedback, influencing their trustworthiness in future trades.
-- The platform should be compatible with multiple devices and accessible to all users.
-
-### 7. Quality Requirements
-
-- The system must be responsive and user-friendly, with minimal delays in trade processing and reward redemption.
-- It must ensure high reliability, particularly during critical trading events like auctions.
-- Security measures must be robust, protecting users from fraud and unauthorized access.
-- The system should be maintainable, with clear documentation and easy-to-update features.
-- Compatibility across devices and platforms must be ensured, with a consistent user experience.
-
----
-
-# User Stories
-
-### 1. Avatar Customization and Progression
-
-- **As a user**, I want to customize my avatar with items and accessories that reflect my achievements, so I can express my identity and progress within the community.
-
-  **Acceptance Criteria:**
-
-  - The user should be able to select from a variety of items to customize their avatar.
-  - The system should track and display the user's progress, unlocking new items as they achieve milestones.
-
-### 2. Gamified Trade System
-
-- **As a trader**, I want to engage in trades that earn me points and rewards, so I feel motivated to participate actively in the platform.
-
-  **Acceptance Criteria:**
-
-  - The user should earn points for each completed trade.
-  - The system should offer bonuses for frequent trading, trading in specific categories, and participating in special events.
-
-### 3. Reward System and Achievements
-
-- **As a user**, I want to earn badges, levels, and special rewards for reaching milestones, so I can showcase my achievements to the community.
-
-  **Acceptance Criteria:**
-
-  - The system should award badges and levels based on user activity, such as the number of trades completed or high ratings received.
-  - Users should be able to view and display their achievements in their profiles.
-
-### 4. Security and Fraud Prevention
-
-- **As a user**, I want my trades to be secure and protected from fraud, so I can trade with confidence.
-
-  **Acceptance Criteria:**
-
-  - The system should verify user identities and employ trade escrow for high-value transactions.
-  - It should include dispute resolution mechanisms and community moderation to handle potential fraud.
-
-### 5. Community Engagement and Social Features
-
-- **As a community member**, I want to interact with other users through forums, chat rooms, and social media, so I can build relationships and participate in community activities.
-
-  **Acceptance Criteria:**
-
-  - The system should provide forums and chat rooms for discussions and trade negotiations.
-  - Social media integration should allow users to share their achievements and trades.
-
-### 6. Marketplace and Auction System
-
-- **As a seller**, I want to list my items in a marketplace or auction, so I can reach a broader audience and potentially earn more from my trades.
-
-  **Acceptance Criteria:**
-
-  - The system should allow users to list items in a marketplace or set up auctions.
-  - The auction system should include features like bid tracking, automatic bidding, and notifications for outbid events.
-
-### 7. User Reputation and Feedback Mechanism
-
-- **As a user**, I want to build a reputation based on feedback from my trades, so I can be recognized as a trustworthy trader.
-
-  **Acceptance Criteria:**
-
-  - The system should enable users to rate each other after trades, contributing to a reputation score.
-  - User profiles should display their reputation scores, influencing their perceived trustworthiness in the community.
-
----
-
-# Actors and Use Cases
-
-## A) Actors
-
-1. **Individual Trader**
-
-   - Uses the system to trade goods and services, customize avatars, and engage with the community.
-
-2. **Community Moderator**
-
-   - Manages user disputes, verifies trades, and ensures the safety and integrity of the platform.
-
-3. **Marketplace Seller**
-
-   - Lists items in the marketplace or sets up auctions to reach a broader audience.
-
-4. **Buyer**
-
-   - Participates in trades, purchases items from the marketplace, and bids in auctions.
-
-5. **Social User**
-
-   - Engages with the community through forums, chat rooms, and social media integration.
-
-## B) Use Cases
-
-### 1. Customize Avatar
-
-- **Select and Apply Items**
-- **Track Progression and Unlock New Items**
-
-### 2. Engage in Trades
-
-- **Initiate Trade**
-- **Complete Trade and Earn Points**
-- **Use Escrow for Secure Transactions**
-
-### 3. Redeem Rewards
-
-- **Earn Badges and Levels**
-- **Unlock Special Items and Abilities**
-
-### 4. Participate in Marketplace and Auctions
-
-- **List Items for Sale**
-- **Set Up and Participate in Auctions**
-- **Track Bids and Manage Sales**
-
-### 5. Ensure Security
-
-- **Verify User Identity**
-- **Implement Two-Factor Authentication**
-- **Report and Resolve Disputes**
-
-### 6. Build Community and Social Interaction
-
-- **Participate in Forums and Chat Rooms**
-- **Share Achievements on Social Media**
-- **Form Trade Groups and Collaborate**
-
-### 7. Build and Maintain Reputation
-
-- **Rate Trades and Provide Feedback**
-- **View and Manage Reputation Score**
-- **Use Reputation to Influence Future Trades**
-
-## C) Use Case Diagram Explanation
-
-### Individual Trader:
-
-- **Customize Avatar:** Allows the user to personalize their avatar with items earned through trades and progression.
-- **Engage in Trades:** Enables the user to barter goods and services, earning points and rewards.
-- **Redeem Rewards:** Lets the user exchange points for badges, levels, and special items.
-- **Participate in Marketplace and Auctions:** Provides tools to sell items, set up auctions, and manage bids.
-
-### Community Moderator:
-
-- **Ensure Security:** Manages the safety of trades, verifies users, and handles disputes.
-
-### Marketplace Seller:
-
-- **List Items for Sale:** Allows users to list their goods in the marketplace, reaching a broader audience.
-- **Set Up and Participate in Auctions:** Facilitates competitive bidding and sales through an auction system.
-
-### Buyer:
-
-- **Participate in Trades:** Engages in purchasing items from the marketplace and bidding in auctions.
-
-### Social User:
-
-- **Build Community:** Engages with others through forums, chat rooms, and social media, building relationships and collaborating on trades.
-
----
-
-# MVP (Minimum Viable Product)
-
-## A) MVP to be Built
-
-### 1. Avatar Customization
-
-- **Features:**
-  - Basic avatar customization with a limited set of items.
-  - Progress tracking and the ability to unlock new items as users achieve milestones.
-
-### 2. Gamified Trade System
-
-- **Features:**
-  - Core trade functionality with point rewards and bonuses for specific trading activities.
-  - Secure transaction handling with basic fraud prevention measures.
-
-### 3. Reward System and Achievements
-
-- **Features:**
-  - Basic badges and rewards for milestone achievements.
-  - Points system for purchasing items and unlocking new features.
-
-### 4. Security Features
-
-- **Features:**
-  - User verification and identity protection.
-  - Escrow service for secure trade completion.
-
-### 5. Community Engagement
-
-- **Features:**
-  - Basic forums and chat rooms for user interaction.
-  - Social media integration for sharing trades and achievements.
-
-### 6. Marketplace and Auction System
-
-- **Features:**
-  - Simple item listing and bidding features.
-  - Basic bid tracking and auction management.
-
-## B) Features Available in the MVP
-
-### 1. Avatar Customization
-
-- **Features:**
-  - Selection of basic items and accessories for avatars.
-  - Progression system tied to user activity.
-
-### 2. Gamified Trade System
-
-- **Features:**
-  - Execution of trades with point rewards and bonuses.
-  - Initial security measures to protect users and trades.
-
-### 3. Reward System and Achievements
-
-- **Features:**
-  - Basic badges for trade milestones.
-  - Ability to redeem points for avatar items.
-
-### 4. Security Features
-
-- **Features:**
-  - Verification of users to prevent fraud.
-  - Escrow for secure trade completion.
-
-### 5. Community Engagement
-
-- **Features:**
-  - Forums and chat rooms for user interaction.
-  - Social media integration for sharing achievements.
-
-### 6. Marketplace and Auction System
-
-- **Features:**
-  - Execution of simple marketplace listings and auctions.
-  - Tracking and managing bids during auctions.
-
-## C) Potential Customer Reach
-
-### Reach Strategies
-
-1. **Website Availability**
-
-   - The MVP will be available for download on the official website, accessible to a broad audience.
-
-2. **Gamification and Trade Community Engagement**
-
-   - Promotion within communities focused on gamification, bartering, and online trading to attract early adopters.
-
-3. **Social Media and Online Forums**
-
-   - Use social media platforms and forums to create awareness, share updates, and gather feedback from users.
-
-4. **User Feedback and Iteration**
-
-   - Collect feedback from early users to refine the system, add features, and improve the overall user experience.
-
----
-
-# A/B Testing
-
-## A) A/B Testing Application Scenario
-
-A/B testing will be used to determine the most engaging avatar customization options, trade incentives, and social features. Different sets of customization items, rewards, and community interaction tools will be tested to see which options drive higher user engagement and satisfaction.
-
-## B) Versions A and B and A/B Test Execution
-
-### Version A: Basic Customization and Social Features
-
-- **Design:**
-  - A limited set of simple customization options and basic social features focusing on ease of use.
-- **Interaction Flow:**
-  - Users select from a small range of items and accessories, with straightforward application and minimal social interaction tools.
-
-### Version B: Advanced Customization and Enhanced Social Features
-
-- **Design:**
-  - A broader range of customization options, including more detailed items and advanced social interaction features.
-- **Interaction Flow:**
-  - Users can select from an extensive list of items, with more intricate customization features and richer social tools, such as chat enhancements and community challenges.
-
-### A/B Test Execution
-
-- **User Division:**
-  - Users will be randomly assigned to Version A or B during the testing period.
-- **Test Period:**
-
-  - The test will run for 4 weeks to gather data on user preferences, engagement, and satisfaction.
-
-- **Data Collection:**
-  - Metrics on user engagement, item selection frequency, social interaction levels, and overall satisfaction will be collected and analyzed.
-
-## C) Metrics to be Used
-
-1. **User Engagement**
-
-   - The amount of time users spend customizing their avatars and participating in social features.
-   - Indicates the attractiveness and usability of the customization and social options.
-
-2. **Customization and Social Interaction Complexity**
-
-   - The number of items and options selected during customization and the level of social interaction.
-   - Reflects user preference for simple or complex features.
-
-3. **User Satisfaction**
-
-   - Feedback on the customization and social interaction experience.
-   - Provides insight into user preferences and areas for improvement.
-
-4. **Feature Usage**
-
-   - Frequency of use for different customization and social features.
-   - Helps determine which features are most popular and should be expanded.
-
-## Discussion
-
-By analyzing these metrics, the most engaging and satisfying customization, trade, and social interaction options can be identified. The version that offers better user engagement and satisfaction will be chosen as the default experience for the system. User feedback will be used to refine and expand the feature set in future updates.
-
----
+# Barter Product Requirements
+
+This document describes the intended product direction for Barter. It is not a description of completed functionality.
+
+The current codebase is a Flutter scaffold with the starter counter app in `lib/main.dart`. The requirements below are product goals that should guide future implementation.
+
+## Scope Summary
+
+| Area | Current codebase status |
+| --- | --- |
+| App shell | Flutter starter app exists |
+| Product UI | Not implemented |
+| User accounts | Not implemented |
+| Listings | Not implemented |
+| Trades | Not implemented |
+| Avatar progression | Not implemented |
+| Rewards and achievements | Not implemented |
+| Reputation | Not implemented |
+| Chat or community features | Not implemented |
+| Marketplace auctions | Not implemented |
+| Backend/API | Not implemented |
+| Database/persistence | Not implemented |
+| Security controls | Not implemented |
+
+## Product Goal
+
+Barter should become a gamified marketplace for exchanging goods and services. The product should make direct exchange feel trustworthy, engaging, and community-oriented by combining:
+
+- Listings for goods and services.
+- Direct barter offers.
+- Reputation and feedback after completed exchanges.
+- Avatar customization and progression.
+- Points, rewards, badges, or achievements.
+- Community interaction and moderation.
+- Safer trading mechanisms such as verification, dispute handling, and fraud prevention.
+
+## Target Users
+
+| User group | Need |
+| --- | --- |
+| Individual traders | Exchange goods or services without relying only on cash transactions. |
+| Collectors and hobbyists | Trade niche items and build identity through progression or avatars. |
+| Service providers | Offer skills or services in exchange for goods, credits, or other services. |
+| Trust-conscious users | Evaluate other traders through verification, ratings, history, and reputation. |
+| Community moderators | Review reports, resolve disputes, and help keep the marketplace safe. |
+
+## Product Principles
+
+- Barter should make trust visible before a user commits to a trade.
+- The core exchange flow should be understandable without requiring financial-market or auction expertise.
+- Gamification should support real marketplace behavior, not distract from trade safety.
+- Reputation should be earned from completed interactions and peer feedback.
+- Security and moderation should be designed before high-value trades, escrow, or payment-like behavior is introduced.
+
+## MVP Definition
+
+The first meaningful MVP should replace the starter counter app with a small but coherent marketplace loop.
+
+### MVP In Scope
+
+| Feature | Description | Status |
+| --- | --- | --- |
+| Product shell | Branded home screen and navigation for the Barter concept. | Planned |
+| Profile stub | Basic user profile surface with display name, reputation placeholder, and avatar placeholder. | Planned |
+| Listing browser | Browse a small set of goods or services. | Planned |
+| Listing detail | View listing title, description, category, owner, and requested exchange. | Planned |
+| Offer flow | Start a proposed barter offer from a listing. | Planned |
+| Trade status | Represent pending, accepted, completed, and disputed trade states. | Planned |
+| Reputation placeholder | Display reputation concepts without claiming real trust scoring until data exists. | Planned |
+| Basic widget tests | Test the first real user-visible flow. | Planned |
+
+### MVP Out of Scope
+
+These features should not be presented as complete until corresponding code, data, and security models exist:
+
+- Real authentication.
+- Real identity verification.
+- Escrow.
+- Payment handling.
+- Real-time chat.
+- Push notifications.
+- Auctions with live bidding.
+- Moderation queues.
+- Fraud detection.
+- Social media integrations.
+- Multi-language support.
+
+## Functional Requirements
+
+### Profiles and Identity
+
+| ID | Requirement | Priority | Status |
+| --- | --- | --- | --- |
+| BTR-PROFILE-001 | Users should have a profile with display name, avatar, basic trade history, and reputation summary. | High | Planned |
+| BTR-PROFILE-002 | Users should be able to customize avatar appearance. | Medium | Planned |
+| BTR-PROFILE-003 | Avatar items should be unlockable through product milestones. | Medium | Planned |
+| BTR-PROFILE-004 | Identity verification should be designed before trust badges or high-value trade support are released. | High | Planned |
+
+### Listings
+
+| ID | Requirement | Priority | Status |
+| --- | --- | --- | --- |
+| BTR-LISTING-001 | Users should be able to create listings for goods or services. | High | Planned |
+| BTR-LISTING-002 | Listings should include title, description, category, owner, condition or service scope, and desired exchange. | High | Planned |
+| BTR-LISTING-003 | Users should be able to browse and filter listings. | High | Planned |
+| BTR-LISTING-004 | Users should be able to view listing details before starting a trade offer. | High | Planned |
+
+### Trades and Offers
+
+| ID | Requirement | Priority | Status |
+| --- | --- | --- | --- |
+| BTR-TRADE-001 | Users should be able to propose a barter offer for a listing. | High | Planned |
+| BTR-TRADE-002 | A trade should support clear states such as pending, accepted, rejected, completed, canceled, and disputed. | High | Planned |
+| BTR-TRADE-003 | Users should be able to review trade details before accepting. | High | Planned |
+| BTR-TRADE-004 | Completed trades should be eligible for feedback and reward progress. | Medium | Planned |
+
+### Reputation and Feedback
+
+| ID | Requirement | Priority | Status |
+| --- | --- | --- | --- |
+| BTR-REP-001 | Users should be able to rate each other after completed trades. | High | Planned |
+| BTR-REP-002 | Profiles should show reputation in a way that is visible but not misleading. | High | Planned |
+| BTR-REP-003 | Reputation should consider completed trades and peer feedback. | Medium | Planned |
+| BTR-REP-004 | Reputation rules should be documented before they affect user trust decisions. | High | Planned |
+
+### Rewards and Progression
+
+| ID | Requirement | Priority | Status |
+| --- | --- | --- | --- |
+| BTR-REWARD-001 | Users should receive points or progress for completed trades. | Medium | Planned |
+| BTR-REWARD-002 | Users should earn badges or achievements for meaningful milestones. | Medium | Planned |
+| BTR-REWARD-003 | Reward mechanics should not incentivize spam, fake trades, or abusive behavior. | High | Planned |
+
+### Community and Communication
+
+| ID | Requirement | Priority | Status |
+| --- | --- | --- | --- |
+| BTR-COMM-001 | Users should have a way to discuss trades or ask listing questions. | Medium | Planned |
+| BTR-COMM-002 | Community areas should have moderation rules before public launch. | High | Planned |
+| BTR-COMM-003 | Social sharing should be optional and should not expose private trade data. | Medium | Planned |
+
+### Marketplace and Auctions
+
+| ID | Requirement | Priority | Status |
+| --- | --- | --- | --- |
+| BTR-MARKET-001 | The marketplace should support browsing listings by category. | High | Planned |
+| BTR-MARKET-002 | Auction behavior may be explored after the direct barter flow works. | Low | Planned |
+| BTR-MARKET-003 | Auctions should not be implemented without clear bidding, notification, abuse, and dispute rules. | High | Planned |
+
+### Safety and Moderation
+
+| ID | Requirement | Priority | Status |
+| --- | --- | --- | --- |
+| BTR-SAFE-001 | Users should be able to report suspicious listings, profiles, or trades. | High | Planned |
+| BTR-SAFE-002 | Dispute handling should be represented before completed trade reputation becomes meaningful. | High | Planned |
+| BTR-SAFE-003 | Identity verification, escrow, or payment-like workflows require a dedicated security design before implementation. | High | Planned |
+| BTR-SAFE-004 | Sensitive user data should not be collected until storage, privacy, and retention rules are defined. | High | Planned |
+
+## Conceptual Domain Model
+
+No domain classes, database schema, API contracts, or persistent storage exist in the current codebase.
+
+The following entities are conceptual requirements for future design:
+
+| Entity | Responsibility |
+| --- | --- |
+| User | Represents a person using the marketplace. |
+| Profile | Stores public display information, avatar, reputation summary, and trade history. |
+| Listing | Represents a good or service available for barter. |
+| Offer | Represents a proposed exchange against a listing. |
+| Trade | Represents the lifecycle of an accepted exchange. |
+| Feedback | Represents post-trade rating and comments. |
+| Reward | Represents points, badges, achievements, or unlocks. |
+| AvatarItem | Represents customization assets earned or selected by users. |
+| Dispute | Represents a safety or moderation case tied to a trade. |
+| Auction | Represents an optional future competitive listing format. |
+
+## Main User Flow
+
+The intended direct barter flow is:
+
+```mermaid
+flowchart TD
+    A["Open Barter"] --> B["Browse listings"]
+    B --> C["Open listing detail"]
+    C --> D["Review owner reputation"]
+    D --> E["Create barter offer"]
+    E --> F["Owner accepts or rejects"]
+    F --> G["Complete trade"]
+    G --> H["Leave feedback"]
+    H --> I["Update reputation and rewards"]
+```
+
+This flow is not implemented yet.
+
+## Quality Requirements
+
+| Quality attribute | Requirement |
+| --- | --- |
+| Usability | The trade flow should be short, legible, and understandable for first-time users. |
+| Reliability | Trade state changes should be durable and auditable once persistence exists. |
+| Performance | Listing browsing and profile surfaces should remain responsive on mobile devices. |
+| Security | Trust, verification, dispute, and reputation features must not be simulated as real protections. |
+| Maintainability | Product code should be separated into clear UI, domain, state, and data layers when the app grows beyond `lib/main.dart`. |
+| Compatibility | Flutter platform support should be narrowed or validated before claiming production support across all generated platforms. |
+| Accessibility | Core flows should support readable text, touch targets, semantic labels, and keyboard/screen reader paths where platform-relevant. |
+
+## A/B Testing Candidates
+
+A/B testing should only happen after the product has real usage surfaces and instrumentation.
+
+Potential future tests:
+
+| Experiment | Version A | Version B | Primary metric |
+| --- | --- | --- | --- |
+| Offer creation | Compact offer form | Guided step-by-step offer flow | Completed offer rate |
+| Avatar progression | Simple badge unlocks | Visual avatar item unlocks | Return visits after completed trade |
+| Trust display | Numeric reputation score | Reputation summary with recent feedback | Offer acceptance rate |
+| Listing discovery | Category-first browsing | Search-first browsing | Listing detail views |
+
+## Open Decisions
+
+These decisions are not identified in the current codebase:
+
+- TODO: not identified in the current codebase - whether the MVP should use a real backend, local mock data, or static demo data.
+- TODO: not identified in the current codebase - authentication provider or account model.
+- TODO: not identified in the current codebase - database technology.
+- TODO: not identified in the current codebase - state management approach.
+- TODO: not identified in the current codebase - moderation workflow.
+- TODO: not identified in the current codebase - escrow, payment, or third-party verification provider.
+- TODO: not identified in the current codebase - release targets and deployment process.
+
+## Documentation Triggers
+
+Additional documentation should be created only when the corresponding implementation exists:
+
+- Add `docs/architecture.md` after the app has meaningful UI, state, domain, and data layers.
+- Add `docs/api.md` only after backend endpoints, server actions, SDK methods, or external API contracts exist.
+- Add `docs/database.md` only after persistent storage, migrations, schemas, or models exist.
+- Add `docs/security.md` only after authentication, authorization, verification, moderation, or sensitive data handling exists.
+- Add `docs/deployment.md` only after deployment targets, CI/CD, release scripts, or hosting configuration exist.
